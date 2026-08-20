@@ -33,7 +33,12 @@ export async function logoutGuest(): Promise<void> {
   await signOut(auth);
 }
 
-export async function saveLeaderboardEntry(uid: string, name: string, totalLines: number): Promise<void> {
+export async function saveLeaderboardEntry(
+  uid: string,
+  name: string,
+  totalLines: number,
+  team: string,
+): Promise<void> {
   if (!db) return;
 
   await setDoc(
@@ -41,6 +46,7 @@ export async function saveLeaderboardEntry(uid: string, name: string, totalLines
     {
       uid,
       name,
+      team,
       totalLines,
       updatedAt: new Date().toISOString(),
     },
