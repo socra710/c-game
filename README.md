@@ -19,3 +19,7 @@ npm run build
 
 - `main` 브랜치에 push하면 GitHub Actions가 자동으로 빌드 및 배포합니다.
 - 배포 결과는 저장소 설정에서 Pages로 확인할 수 있습니다.
+
+## Firebase 설정
+
+Firebase 연동이 필요한 경우 `docs/FIREBASE_SETUP.md`를 참고하세요.
